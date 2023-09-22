@@ -35,13 +35,14 @@ yargs.command({
   },
 });
 yargs.command({
-  command: "list",
-  describe: "Command to list  notes",
-  handler: () => {
-    // console.log("Listing notes");
-    note.listNotes();
-  },
-});
+    command: "list",
+    describe: "Command to list  notes",
+    handler: () => {
+     // console.log("Listing notes");
+     note.listNotes();
+
+    },
+  });
 yargs.command({
   command: "read",
   describe: "Command to read notes",
@@ -50,13 +51,14 @@ yargs.command({
       describe: "Title property",
       demandOption: true,
       type: "string",
-    },
+    }
   },
-  handler: (argv) => {
+  handler:  (argv) => {
     //console.log("Reading a note");
     note.readNote(argv.title);
   },
 });
+
 
 yargs.parse();
 // console.log(yargs.argv);
